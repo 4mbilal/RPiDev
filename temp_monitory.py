@@ -1,6 +1,8 @@
 #Credit: Keval Patel
 #https://medium.com/@kevalpatel2106/monitor-the-core-temperature-of-your-raspberry-pi-3ddfdf82989f
 
+#watch 'vcgencmd measure_temp'
+
 import os
 import time
 
