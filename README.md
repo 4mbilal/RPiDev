@@ -1,3 +1,2 @@
 # RPiDev
-Development projects on Raspberry Pi
-Robotics + computer vision + AI/ML
+Development projects on Raspberry Pi (Robotics + computer vision + AI/ML)
