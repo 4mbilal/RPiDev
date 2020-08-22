@@ -69,10 +69,13 @@ wstool update -t src
 
 # Install ROSARIA
 mkdir -p ~/Aria
+cd ~/Aria
 git clone https://github.com/cinvesrob/Aria.git
-cd Aria
 make -j4
 sudo make install
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/Aria
+sudo ldconfig
+
 
 cd src
 sudo git clone https://github.com/amor-ros-pkg/rosaria.git
@@ -89,7 +92,7 @@ echo "Press No when asked to install libbost1.67"
 rosdep install --from-paths src --ignore-src --rosdistro kinetic -r --os=debian:buster
 
 #Rebuild again
-#This error might come up during building: "src/geometry2/tf2/src/buffer_core.cpp:126:34: error: ‘logWarn’ was not declared in this scope"
+#This error might come up during building: "src/geometry2/tf2/src/buffer_core.cpp:126:34: error: â€˜logWarnâ€™ was not declared in this scope"
 #Solution is to append "logWarn" and "logError" with "CONSOLE_BRIDGE_" in whole file.
 
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/kinetic
