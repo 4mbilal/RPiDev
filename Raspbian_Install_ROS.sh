@@ -67,14 +67,14 @@ rosinstall_generator ros_comm ros_control joystick_drivers --rosdistro kinetic -
 wstool merge -t src kinetic-custom_ros.rosinstall
 wstool update -t src
 
-# Install ROSARIA
-mkdir -p ~/Aria
-cd ~/Aria
-git clone https://github.com/cinvesrob/Aria.git
-make -j4
-sudo make install
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/Aria
-sudo ldconfig
+# Install ROSARIA, Newer ROS version install it automatically. if they don't, then install manually
+# mkdir -p ~/Aria
+# cd ~/Aria
+# git clone https://github.com/cinvesrob/Aria.git
+# make -j4
+# sudo make install
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/Aria
+# sudo ldconfig
 
 
 cd src
