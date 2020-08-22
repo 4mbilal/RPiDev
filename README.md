@@ -1,2 +1,2 @@
-# RPiDev
-Development projects on Raspberry Pi (Robotics + computer vision + AI/ML)
+# RPi_ROS
+ROS projects on Raspberry Pi
