@@ -80,6 +80,7 @@ sudo ldconfig
 cd src
 sudo git clone https://github.com/amor-ros-pkg/rosaria.git
 sudo git clone  https://github.com/Slamtec/rplidar_ros.git
+cd ..
 
 # install dependencies
 
